@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Quizz</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>About</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="topic-list section-p1">
+        <h1 id="quiz-heading">Quizzy</h1>
+        <p id="tag-line">Test your knowledge and have fun!</p>
+        <div class="topic-container">
+            <div class="card" id = "quizCard1">
+                <img src="img/history.jpg" alt="">
+                <div class="des">
+                    <h2>History Quiz</h2>
+                    <h4>This quiz contains of 5 questions related to history of India, each question has 1 mark</h4>
+                    <button class="quiz-btn">Take Quiz</button>
+                </div>
+            </div>
+            <div class="card" id="quizCard2">
+                <img src="img/geography.jpg" alt="">
+                <div class="des">
+                    <h2>Geography Quiz</h2>
+                    <h4>This quiz contains of 5 questions related to geography, each question has 1 mark</h4>
+                    <button class="quiz-btn">Take Quiz</button>
+                </div>
+            </div>
+            <div class="card" id="quizCard3">
+                <img src="img/space.jpg" alt="">
+                <div class="des">
+                    <h2>Space Trival Quiz</h2>
+                    <h4>This quiz contains of 5 questions related to the space, each question has 1 mark</h4>
+                    <button class="quiz-btn">Take Quiz</button>
+                </div>
+            </div>
+            <div class="card" id="quizCard4">
+                <img src="img/gk.jpg" alt="">
+                <div class="des">
+                    <h2>General Knowledge</h2>
+                    <h4>This quiz contains of 5 questions related to General knowledge, each question has 1 mark</h4>
+                    <button class="quiz-btn">Take Quiz</button>
+                </div>
+            </div>
+            <div class="card" id="quizCard5">
+                <img src="img/cricket.jpg" alt="">
+                <div class="des">
+                    <h2>Cricket Quiz</h2>
+                    <h4>This quiz contains of 5 questions related to the Cricket, each question has 1 mark</h4>
+                    <button class="quiz-btn">Take Quiz</button>
+                </div>
+            </div>
+            <div class="card" id="quizCard6">
+                <img src="img/logos.jpg" alt="">
+                <div class="des">
+                    <h2>Guess the Logos</h2>
+                    <h4>This quiz contains of 5 questions, each question has 1 mark. You have to guess the tech logo given</h4>
+                    <button class="quiz-btn">Take Quiz</button>
+                </div>
+            </div>
+            <div class="card" id="quizCard7">
+                <img src="img/movies.jpg" alt="">
+                <div class="des">
+                    <h2>Movies Quiz</h2>
+                    <h4>This quiz contains of 5 questions, each question has 1 mark.</h4>
+                    <button class="quiz-btn">Take Quiz</button>
+                </div>
+            </div>
+            <div class="card" id="quizCard8">
+                <img src="img/tech.jpg" alt="">
+                <div class="des">
+                    <h2>Technology Quiz</h2>
+                    <h4>This quiz contains of 5 questions each question has 1 mark.</h4>
+                    <button class="quiz-btn">Take Quiz</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const quizCard1 = document.getElementById('quizCard1');
+        const quizCard2 = document.getElementById('quizCard2');
+        const quizCard3 = document.getElementById('quizCard3');
+        const quizCard4 = document.getElementById('quizCard4');
+        const quizCard5 = document.getElementById('quizCard5');
+        const quizCard6 = document.getElementById('quizCard6');
+        const quizCard7 = document.getElementById('quizCard7');
+        const quizCard8 = document.getElementById('quizCard8');
+    
+        quizCard1.addEventListener('click', function() {
+            window.location.href = 'quiz.html?script=history.js&bg=history-bg.jpg';
+        });
+    
+        quizCard2.addEventListener('click', function() {
+            window.location.href = 'quiz.html?script=geography.js&bg=geography-bg.jpg';
+        });
+
+        quizCard3.addEventListener('click', function() {
+            window.location.href = 'quiz.html?script=space.js&bg=space-bg.jpg';
+        });
+
+        quizCard4.addEventListener('click', function() {
+            window.location.href = 'quiz.html?script=gk.js&bg=gk-bg.jpg';
+        });
+
+        quizCard5.addEventListener('click', function() {
+            window.location.href = 'quiz.html?script=cricket.js&bg=cricket-bg.jpg';
+        });
+
+        quizCard6.addEventListener('click', function() {
+            window.location.href = 'quiz.html?script=logo.js&bg=logo-bg.jpg';
+        });
+
+        quizCard7.addEventListener('click', function() {
+            window.location.href = 'quiz.html?script=movies.js&bg=movies-bg.jpg';
+        });
+
+        quizCard8.addEventListener('click', function() {
+            window.location.href = 'quiz.html?script=tech.js&bg=tech-bg.jpg';
+        });
+    
+    </script>
+
+</body>
+</html>

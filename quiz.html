@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Quizz</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>About</li>
+                <li>Contact Us</li>
+            </ul>
+        </nav>
+    </header>
+    <section class="app">
+        <h1 id="quiz-head">History Quiz</h1>
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div id="answer-buttons">
+                <button class="btn">Answer 1</button>
+                <button class="btn">Answer 2</button>
+                <button class="btn">Answer 3</button>
+                <button class="btn">Answer 4</button>
+            </div>
+            <button id="next-btn">Next</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const quizHead = document.getElementById('quiz-head');
+            const urlParams = new URLSearchParams(window.location.search);
+            const scriptName = urlParams.get('script');
+            const selectedBG = urlParams.get('bg');
+            console.log(selectedBG);
+        
+            const script = document.createElement('script');
+            script.src = scriptName;
+
+            const body = document.body;
+            if (selectedBG === 'history-bg.jpg') {
+                body.style.backgroundImage = "url('img/history-bg.jpg')";
+                quizHead.innerHTML = "History Quiz"
+            } else if (selectedBG === 'geography-bg.jpg') {
+                body.style.backgroundImage = "url('img/geography-bg.jpg')";
+                quizHead.innerHTML = "Geography Quiz"
+            } else if (selectedBG === 'space-bg.jpg') {
+                body.style.backgroundImage = "url('img/space-bg.jpg')";
+                quizHead.innerHTML = "Space Trival Quiz"
+            } else if (selectedBG === 'gk-bg.jpg') {
+                body.style.backgroundImage = "url('img/gk-bg.jpg')";
+                quizHead.innerHTML = "General Knowledge Quiz"
+            }else if (selectedBG === 'cricket-bg.jpg') {
+                body.style.backgroundImage = "url('img/cricket-bg.jpg')";
+                quizHead.innerHTML = "Cricket Quiz"
+            } else if (selectedBG === 'logo-bg.jpg') {
+                body.style.backgroundImage = "url('img/logo-bg.jpg')";
+                quizHead.innerHTML = "Guess the Logo Quiz"
+            } else if (selectedBG === 'movies-bg.jpg') {
+                body.style.backgroundImage = "url('img/movies-bg.jpg')";
+                quizHead.innerHTML = "Movies Quiz"
+            } else if (selectedBG === 'tech-bg.jpg') {
+                body.style.backgroundImage = "url('img/tech-bg.jpg')";
+                quizHead.innerHTML = "Technology Quiz"
+            }
+
+            document.body.appendChild(script);
+       })
+        
+
+    </script>
+</body>
+</html>
